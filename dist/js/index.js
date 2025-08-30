@@ -7,7 +7,7 @@ let randomNum = Math.floor(Math.random()*names.length);
 let currentName = names[randomNum];
 
 document.querySelector('.name').append(currentName);
-
+/*
 fetch('https://api.imgflip.com/get_memes')
 .then(response => response.json())
 .then(data => {
@@ -18,4 +18,6 @@ fetch('https://api.imgflip.com/get_memes')
         img.src = data.data.memes[i].url;
         document.getElementById('img-container').appendChild(img);
     }
+
 })
+    */
