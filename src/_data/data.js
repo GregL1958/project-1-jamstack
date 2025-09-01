@@ -1,8 +1,10 @@
 const axios = require('axios');
 
-MediaSourceHandle.exports = async function(){
+module.exports = async function(){
     try {
-        response = await axios.get('http//api.imgflip.com/get_memes');
+        response = await axios.get('http://api.imgflip.com/get_memes');
+
+        console.log(response.data.data);
         return response.data.data;
     
     } catch(error){
