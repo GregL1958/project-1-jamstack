@@ -2,7 +2,8 @@ const axios = require('axios');
 
 module.exports = async function(){
     try {
-        response = await axios.get('http://api.imgflip.com/get_memes');
+        response = await axios.get('https://api.themoviedb.org/3/configuration');
+
 
         console.log(response.data.data);
         return response.data.data;
