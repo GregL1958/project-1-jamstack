@@ -1,4 +1,4 @@
-const axios = require('axios');
+/* const axios = require('axios');
 
 module.exports = async function(){
     try {
@@ -11,11 +11,25 @@ module.exports = async function(){
     } catch(error){
         console.error(error);
     }
+*/
+    import axios from 'axios';
+
+    const options = {
+        method: 'GET',
+        url: 'https://api.themoviedb.org/3/configuration',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YTNkMGE1ZTU4ZDg1NjYwNTFkM2JmZTA2ZDU4MDIzMiIsIm5iZiI6MTc1NjkyODgzMi4yODksInN1YiI6IjY4Yjg5YjQwNWUwZDQ3YjA3NThjZGE2YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.31DtPn_eh-wTfjeXyx2BSfqqIN4r3-bYgzx6837J0WU'
+        }
+    };
+
+    axios
+        .request(options)
+        .then(res => console.log(res.data))
+        .catch(err => console.error(err));
 
 
-
-
-}
+//}
 
 
 /*
