@@ -1,18 +1,18 @@
-/* const axios = require('axios');
+const axios = require('axios');
 
 module.exports = async function(){
     try {
-        response = await axios.get('https://api.themoviedb.org/3/configuration');
+        response = await axios.get('https://api.themoviedb.org/3/movie/550?api_key=4a3d0a5e58d8566051d3bfe06d580232');
 
 
-        console.log(response.data.data);
+        console.log(response);
         return response.data.data;
     
     } catch(error){
         console.error(error);
     }
 }
-*/
+/*
     import axios from 'axios';
 
     const options = {
@@ -33,7 +33,7 @@ module.exports = async function(){
 
 
 
-/*
+
 {
     "memes": [
         {"url": "https://i.imgflip.com/30b1gx.jpg"},
