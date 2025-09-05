@@ -11,6 +11,7 @@ module.exports = async function(){
     } catch(error){
         console.error(error);
     }
+}
 */
     import axios from 'axios';
 
@@ -29,7 +30,7 @@ module.exports = async function(){
         .catch(err => console.error(err));
 
 
-//}
+
 
 
 /*
