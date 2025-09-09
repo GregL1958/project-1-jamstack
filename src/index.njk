@@ -3,12 +3,24 @@ title: Built with Template
 layout: base.njk
 ---
 
-
-    <h1>Hello <span class='name'></span></h1>
-    <h2>It's a nice day today!!</h2>
-    <div id='img-container'>
-        {% for meme in data.memes %}
-        <img src={{meme.url}}></img>
-        {% endfor %}
+    {% for movie in data.actionMovies %}
+    <div id=action{{loop.index0}} class="hide">
+        <h1>{{movie.title}}</h1>
+        <img src=https://image.tmdb.org/t/p/w500{{movie.poster_path}}></img>
     </div>
-    <script src='/js/index.js'></script>
+    {% endfor %}
+
+    {% for movie in data.adventureMovies %}
+    <div id=adventure{{loop.index0}} class="hide">
+        <h1>{{movie.title}}</h1>
+        <img src=https://image.tmdb.org/t/p/w500{{movie.poster_path}}></img>
+    </div>
+    {% endfor %}
+
+    {% for movie in data.comedyMovies %}
+    <div id=comedy{{loop.index0}} class="hide">
+        <h1>{{movie.title}}</h1>
+        <img src=https://image.tmdb.org/t/p/w500{{movie.poster_path}}></img>
+    </div>
+    {% endfor %}
+ <script src='/js/index.js'></script>

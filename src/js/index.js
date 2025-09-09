@@ -1,3 +1,18 @@
+const genres = ["action","adventure","comedy"];
+
+let randomNum = Math.floor(Math.random() * genres.length);
+let randomIdx = Math.floor(Math.random() * 20);
+console.log("randomNum = ", randomNum);
+const genre =genres[randomNum];
+
+document.getElementById(genre + randomIdx).className = "show";
+
+
+
+
+
+
+/*
 const names = ['John','Sally','Jane','Roberto','Felipe','Fineas','Ferb'];
 
 //console.log(names);
